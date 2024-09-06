@@ -11,7 +11,7 @@ import org.springframework.data.redis.core.TimeToLive;
 @AllArgsConstructor
 @Builder
 @RedisHash("refreshToken")
-public class RefashToken {
+public class RefreshToken {
     @Id
     private String accountId;
 
@@ -20,7 +20,7 @@ public class RefashToken {
     @TimeToLive //지정한 시간(초) 뒤에 자동으로 해시가 사라짐.
     private Long expiration;
 
-    public RefashToken updateExiration(Long expiration){
+    public RefreshToken updateExiration(Long expiration){
         this.expiration = expiration;
         return this;
     }

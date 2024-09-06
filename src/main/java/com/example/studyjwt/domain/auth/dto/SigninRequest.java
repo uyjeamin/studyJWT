@@ -1,4 +1,4 @@
-package com.example.studyjwt.domain.auth.controller.dto;
+package com.example.studyjwt.domain.auth.dto;
 
 
 import jakarta.validation.constraints.NotBlank;

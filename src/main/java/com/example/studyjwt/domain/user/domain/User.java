@@ -1,9 +1,16 @@
-package com.example.studyjwt.domain.user;
+package com.example.studyjwt.domain.user.domain;
 
+import com.example.studyjwt.domain.user.domain.time.BaseTimeEntity;
 import jakarta.persistence.*;
+import lombok.*;
 
+import javax.management.relation.Role;
 
+@Builder
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
 @Entity
+@Getter
 public class User extends BaseTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,5 +28,7 @@ public class User extends BaseTimeEntity {
     @Column(columnDefinition = "VARCHAR(50)",nullable = false)
     private String email;
 
+    @Enumerated(EnumType.STRING)
+    private Role role;
 
 }

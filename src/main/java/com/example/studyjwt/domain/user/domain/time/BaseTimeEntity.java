@@ -1,4 +1,4 @@
-package com.example.studyjwt.domain.user.domain;
+package com.example.studyjwt.domain.user.domain.time;
 
 
 import jakarta.persistence.EntityListeners;
