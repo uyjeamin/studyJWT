@@ -1,1 +1,30 @@
-spring.application.name=studyJWT
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+
+
+jwt:
+  header: ${HEADER:Authrize}
+  prefix: ${PREFIX:Bearer}
+  secret_key: ${SECRET_KEY:ajdskfhcbvzkahfuuiwbzjxcklv}
+  accessExp: ${ACCESS_EXP:6000}
+  refreshExp: ${REFRESH_EXP:12000}
+
+sentry:
+  dsn: ${SENTRY_DSN}
+  # Set traces-sample-rate to 1.0 to capture 100% of transactions for performance monitoring.
+  # We recommend adjusting this value in production.
+  traces-sample-rate: 1.0
