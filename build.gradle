@@ -34,8 +34,15 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.security:spring-security-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+	//redis
 	implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+
+	//jwt
 	implementation 'io.jsonwebtoken:jjwt:0.9.1'
+
+	//aws kms
+	implementation 'com.amazonaws:aws-java-sdk-kms:1.12.281'
 }
 
 
