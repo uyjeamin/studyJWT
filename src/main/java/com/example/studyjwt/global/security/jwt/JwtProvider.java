@@ -73,7 +73,7 @@ public class JwtProvider { // token 공급자
 
         if(StringUtils.hasText(bearerToken) && bearerToken.startsWith(jwtPropertise.getPrefix())
         && bearerToken.length() >jwtPropertise.getPrefix().length() + 1) {
-            return bearerToken.substring(7);//bearer 접두사가 있으면 그 뒤에 부분의 jwt 를
+            return bearerToken.substring(7);//헤더에 토큰이 들어있다면 접두사 bearer 뒤의 토큰부분만 추출
         }
         return null;
     }
